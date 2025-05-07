@@ -1,0 +1,5 @@
+CompileFlags:
+  Add: [
+    "-I/opt/homebrew/opt/mysql-client/include",
+    "-I/opt/homebrew/opt/openssl@3/include"
+  ]

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Online Store</title>
+  <link rel="stylesheet" href="/os_mini/css/styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to the Store</h1>
+    <div class="cart">
+      <a href="#" onclick="viewCart()">Cart (<span id="cart-count">0</span>)</a>
+    </div>
+  </header>
+
+  <div id="products"></div>
+
+  <!-- Cart Modal -->
+  <div id="cart-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeCart()">&times;</span>
+      <h2>Your Cart</h2>
+      <div id="cart-items"></div>
+      <button onclick="checkout()">Checkout</button>
+    </div>
+  </div>
+
+  <script src="/os_mini/js/scripts.js"></script>
+</body>
+
+</html>
