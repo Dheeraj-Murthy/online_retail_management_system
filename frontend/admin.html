@@ -2,32 +2,32 @@
 <html>
 
 <head>
-  <title>Admin Dashboard</title>
-  <link rel="stylesheet" href="./css/styles.css">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
-  <header>
-    <h1>Admin Panel</h1>
-    <a href="/os_mini/index.html">Back to Store</a>
-  </header>
+    <header>
+        <h1>Admin Panel</h1>
+        <a href="/os_mini/index.html">Back to Store</a>
+    </header>
 
-  <div class="admin-actions">
-    <h2>Add Product</h2>
-    <form id="add-product-form">
-      <input type="text" name="name" placeholder="Product Name" required>
-      <input type="number" name="price" step="0.01" placeholder="Price" required>
-      <input type="number" name="stock" placeholder="Stock" required>
-      <button type="submit">Add Product</button>
-    </form>
-  </div>
+    <div class="admin-actions">
+        <h2>Add Product</h2>
+        <form id="add-product-form" accept-charset="UTF-8">
+            <input type="text" name="name" placeholder="Product Name" required>
+            <input type="number" name="price" step="0.01" placeholder="Price" required>
+            <input type="number" name="stock" placeholder="Stock" required>
+            <button type="submit">Add Product</button>
+        </form>
+    </div>
 
-  <div id="inventory">
-    <h2>Inventory</h2>
-    <div id="product-list"></div>
-  </div>
+    <div id="inventory">
+        <h2>Inventory</h2>
+        <div id="product-list"></div>
+    </div>
 
-  <script src="./js/scripts.js"></script>
+    <script src="./js/scripts.js"></script>
 </body>
 
 </html>

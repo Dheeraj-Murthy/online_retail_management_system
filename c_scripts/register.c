@@ -36,24 +36,19 @@ int main() {
     return 1;
   }
 
-  // Check credentials
+  // Insert user
   char query[256];
   snprintf(query, sizeof(query),
-           "SELECT role FROM users WHERE username='%s' AND password_hash='%s'",
+           "INSERT INTO users (username, password_hash) VALUES ('%s', '%s')",
            username, hashed);
 
-  mysql_query(conn, query);
-  MYSQL_RES *result = mysql_store_result(conn);
-  MYSQL_ROW row = mysql_fetch_row(result);
-
   printf("Content-Type: text/plain\n\n");
-  if (row) {
-    printf("%s", row[0]); // Return role
+  if (mysql_query(conn, query)) {
+    printf("Username already exists");
   } else {
-    printf("invalid");
+    printf("success");
   }
 
-  mysql_free_result(result);
   mysql_close(conn);
   return 0;
 }
